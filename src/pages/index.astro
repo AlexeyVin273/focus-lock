@@ -1,43 +1,19 @@
 ---
 import Container from '@components/Container/Container'
-import Modal from '@components/Modal/Modal'
-import myImage from '../assets/images/mountain.jpg'
 import MainLayout from '@layouts/Main/Main'
-import { Picture as AstroPicture } from 'astro:assets'
-import Picture from '@ui/Picture/Picture'
+import DropdownsList from '@components/DropdownsList/DropdownsList'
+import FocusModal from '@components/FocusModal/FocusModal'
+import Button from '@ui/Button/Button'
 ---
 
 <MainLayout title="Главная">
   <Container>
-    <!--
-      Миксин генерирует все изображения из изначальной картинки (х1, х2, webp, avif)
-      нужно только изначально прокинуть картинку х2
-
-      п.с. удалите коммент при подготовке проекта
-    -->
-    <!--<AstroPicture-->
-    <!--  src={myImage}-->
-    <!--  alt="Example image."-->
-    <!--  quality={'high'}-->
-    <!--  formats={['webp']}-->
-    <!--  fallbackFormat="jpg"-->
-    <!--  width={800}-->
-    <!--  densities={[2]}-->
-    <!--/>-->
-
-    <Picture
-      name="mountain"
-      alt="Example image"
-      format="jpg"
-      width={1920}
-      height={1280}
-    />
-    <p>hello</p>
+    <h1>focus-lock samples</h1>
+    <DropdownsList />
+    <Button text="Модалка" modal="test-focus" mods={['fill']} />
   </Container>
 
   <Fragment slot="modals">
-    <Modal name="example">
-      <h1>Example modal</h1>
-    </Modal>
+    <FocusModal />
   </Fragment>
 </MainLayout>

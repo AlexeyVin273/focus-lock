@@ -1,4 +1,4 @@
-import { FocusLock } from 'src/scripts/utils/focus-lock'
+import { lockFocus, unlockFocus } from 'src/scripts/utils/focus-lock'
 import scrollLock from 'scroll-lock'
 
 // TODO: add types
@@ -6,7 +6,6 @@ import scrollLock from 'scroll-lock'
 export class Modals {
   constructor(settings = {}) {
     this._scrollLock = scrollLock
-    this._focusLock = new FocusLock()
 
     this._modalOpenElements = document.querySelectorAll('[data-open-modal]')
     this._stackModalElements = []
@@ -193,7 +192,7 @@ export class Modals {
     }
 
     if (this._lockFocus) {
-      this._focusLock.lock('.modal.is-active', this._startFocus)
+      lockFocus(document.querySelector('.modal.is-active'), this._startFocus)
     }
 
     if (this._resetScrollPos) {
@@ -238,7 +237,7 @@ export class Modals {
     }
 
     if (this._lockFocus) {
-      this._focusLock.unlock(this._focusBack)
+      unlockFocus(this._focusBack)
     }
 
     modal.classList.remove('is-active')
