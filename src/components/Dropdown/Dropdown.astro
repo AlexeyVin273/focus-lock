@@ -11,242 +11,319 @@ const { order } = Astro.props
 
 <div class="dropdown" data-dropdown>
   <Button text="Показать попап" data-dropdown-btn />
-  {!order && (
-    <div class="dropdown__content" data-dropdown-content>
-      <div class="dropdown__content-inner">
-        <div class="dropdown__content-header">
-          <h3 class="dropdown__content-title">Заголовок попапа</h3>
-          <button class="dropdown__content-close" data-dropdown-close>
-            <Icon name="icon-close" />
-          </button>
-        </div>
-        <div class="dropdown__content-body">
-          <div class="dropdown__iframe-video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/aO3VXSa2RHA"
-              title="Лесли Нильсен в Resident Evil 4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
+  {
+    !order && (
+      <div class="dropdown__content" data-dropdown-content>
+        <div class="dropdown__content-inner">
+          <div class="dropdown__content-header">
+            <h3 class="dropdown__content-title">Заголовок попапа</h3>
+            <button class="dropdown__content-close" data-dropdown-close>
+              <Icon name="icon-close" />
+            </button>
           </div>
-          <a href="#" class="dropdown__link">Ссылка 1</a>
-          <a href="#" class="dropdown__link">Ссылка 2</a>
-          <ul class="dropdown__list">
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 1</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 2</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 3</li>
-          </ul>
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+          <div class="dropdown__content-body">
+            <div class="dropdown__iframe-video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/aO3VXSa2RHA"
+                title="Лесли Нильсен в Resident Evil 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <a href="#" class="dropdown__link">
+              Ссылка 1
+            </a>
+            <a href="#" class="dropdown__link">
+              Ссылка 2
+            </a>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 1
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 2
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 3
+              </li>
+            </ul>
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
           </div>
-        </div>
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
+          </div>
         </div>
       </div>
-    </div>
-  )}
-  {order === 1 && (
-    <div class="dropdown__content" data-dropdown-content>
-      <div class="dropdown__content-inner">
-        <div class="dropdown__content-body">
-          <div class="dropdown__iframe-video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/aO3VXSa2RHA"
-              title="Лесли Нильсен в Resident Evil 4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
+    )
+  }
+  {
+    order === 1 && (
+      <div class="dropdown__content" data-dropdown-content>
+        <div class="dropdown__content-inner">
+          <div class="dropdown__content-body">
+            <div class="dropdown__iframe-video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/aO3VXSa2RHA"
+                title="Лесли Нильсен в Resident Evil 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <a href="#" class="dropdown__link">
+              Ссылка 1
+            </a>
+            <a href="#" class="dropdown__link">
+              Ссылка 2
+            </a>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 1
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 2
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 3
+              </li>
+            </ul>
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
           </div>
-          <a href="#" class="dropdown__link">Ссылка 1</a>
-          <a href="#" class="dropdown__link">Ссылка 2</a>
-          <ul class="dropdown__list">
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 1</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 2</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 3</li>
-          </ul>
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
           </div>
-        </div>
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
-        </div>
-        <div class="dropdown__content-header">
-          <h3 class="dropdown__content-title">Заголовок попапа</h3>
-          <button class="dropdown__content-close" data-dropdown-close>
-            <Icon name="icon-close" />
-          </button>
+          <div class="dropdown__content-header">
+            <h3 class="dropdown__content-title">Заголовок попапа</h3>
+            <button class="dropdown__content-close" data-dropdown-close>
+              <Icon name="icon-close" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  )}
-  {order === 2 && (
-    <div class="dropdown__content" data-dropdown-content>
-      <div class="dropdown__content-inner">
-        <div class="dropdown__content-body">
-          <a href="#" class="dropdown__link">Ссылка 1</a>
-          <div class="dropdown__iframe-video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/aO3VXSa2RHA"
-              title="Лесли Нильсен в Resident Evil 4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
+    )
+  }
+  {
+    order === 2 && (
+      <div class="dropdown__content" data-dropdown-content>
+        <div class="dropdown__content-inner">
+          <div class="dropdown__content-body">
+            <a href="#" class="dropdown__link">
+              Ссылка 1
+            </a>
+            <div class="dropdown__iframe-video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/aO3VXSa2RHA"
+                title="Лесли Нильсен в Resident Evil 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <a href="#" class="dropdown__link">
+              Ссылка 2
+            </a>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 1
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 2
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 3
+              </li>
+            </ul>
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
           </div>
-          <a href="#" class="dropdown__link">Ссылка 2</a>
-          <ul class="dropdown__list">
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 1</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 2</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 3</li>
-          </ul>
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
           </div>
-        </div>
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
-        </div>
-        <div class="dropdown__content-header">
-          <h3 class="dropdown__content-title">Заголовок попапа</h3>
-          <button class="dropdown__content-close" data-dropdown-close>
-            <Icon name="icon-close" />
-          </button>
+          <div class="dropdown__content-header">
+            <h3 class="dropdown__content-title">Заголовок попапа</h3>
+            <button class="dropdown__content-close" data-dropdown-close>
+              <Icon name="icon-close" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  )}
-  {order === 3 && (
-    <div class="dropdown__content" data-dropdown-content>
-      <div class="dropdown__content-inner">
-        <div class="dropdown__content-body">
-          <ul class="dropdown__list">
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 1</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 2</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 3</li>
-          </ul>
-          <a href="#" class="dropdown__link">Ссылка 1</a>
-          <div class="dropdown__iframe-video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/aO3VXSa2RHA"
-              title="Лесли Нильсен в Resident Evil 4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
+    )
+  }
+  {
+    order === 3 && (
+      <div class="dropdown__content" data-dropdown-content>
+        <div class="dropdown__content-inner">
+          <div class="dropdown__content-body">
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 1
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 2
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 3
+              </li>
+            </ul>
+            <a href="#" class="dropdown__link">
+              Ссылка 1
+            </a>
+            <div class="dropdown__iframe-video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/aO3VXSa2RHA"
+                title="Лесли Нильсен в Resident Evil 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <a href="#" class="dropdown__link">
+              Ссылка 2
+            </a>
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
           </div>
-          <a href="#" class="dropdown__link">Ссылка 2</a>
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
           </div>
-        </div>
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
-        </div>
-        <div class="dropdown__content-header">
-          <h3 class="dropdown__content-title">Заголовок попапа</h3>
-          <button class="dropdown__content-close" data-dropdown-close>
-            <Icon name="icon-close" />
-          </button>
+          <div class="dropdown__content-header">
+            <h3 class="dropdown__content-title">Заголовок попапа</h3>
+            <button class="dropdown__content-close" data-dropdown-close>
+              <Icon name="icon-close" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  )}
-  {order === 4 && (
-    <div class="dropdown__content" data-dropdown-content>
-      <div class="dropdown__content-inner">
-        <div class="dropdown__content-body">
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+    )
+  }
+  {
+    order === 4 && (
+      <div class="dropdown__content" data-dropdown-content>
+        <div class="dropdown__content-inner">
+          <div class="dropdown__content-body">
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 1
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 2
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 3
+              </li>
+            </ul>
+            <a href="#" class="dropdown__link">
+              Ссылка 1
+            </a>
+            <div class="dropdown__iframe-video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/aO3VXSa2RHA"
+                title="Лесли Нильсен в Resident Evil 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <a href="#" class="dropdown__link">
+              Ссылка 2
+            </a>
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
           </div>
-          <ul class="dropdown__list">
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 1</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 2</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 3</li>
-          </ul>
-          <a href="#" class="dropdown__link">Ссылка 1</a>
-          <div class="dropdown__iframe-video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/aO3VXSa2RHA"
-              title="Лесли Нильсен в Resident Evil 4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
           </div>
-          <a href="#" class="dropdown__link">Ссылка 2</a>
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+          <div class="dropdown__content-header">
+            <h3 class="dropdown__content-title">Заголовок попапа</h3>
+            <button class="dropdown__content-close" data-dropdown-close>
+              <Icon name="icon-close" />
+            </button>
           </div>
-        </div>
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
-        </div>
-        <div class="dropdown__content-header">
-          <h3 class="dropdown__content-title">Заголовок попапа</h3>
-          <button class="dropdown__content-close" data-dropdown-close>
-            <Icon name="icon-close" />
-          </button>
         </div>
       </div>
-    </div>
-  )}
-  {order === 4 && (
-    <div class="dropdown__content" data-dropdown-content>
-      <div class="dropdown__content-inner">
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
-        </div>
-        <div class="dropdown__content-body">
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+    )
+  }
+  {
+    order === 4 && (
+      <div class="dropdown__content" data-dropdown-content>
+        <div class="dropdown__content-inner">
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
           </div>
-          <ul class="dropdown__list">
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 1</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 2</li>
-            <li class="dropdown__list-item" tabindex="0">tabindex="0" 3</li>
-          </ul>
-          <a href="#" class="dropdown__link">Ссылка 1</a>
-          <div class="dropdown__iframe-video">
-            <iframe
-              width="1280"
-              height="720"
-              src="https://www.youtube.com/embed/aO3VXSa2RHA"
-              title="Лесли Нильсен в Resident Evil 4"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
+          <div class="dropdown__content-body">
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 1
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 2
+              </li>
+              <li class="dropdown__list-item" tabindex="0">
+                tabindex="0" 3
+              </li>
+            </ul>
+            <a href="#" class="dropdown__link">
+              Ссылка 1
+            </a>
+            <div class="dropdown__iframe-video">
+              <iframe
+                width="1280"
+                height="720"
+                src="https://www.youtube.com/embed/aO3VXSa2RHA"
+                title="Лесли Нильсен в Resident Evil 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+            <a href="#" class="dropdown__link">
+              Ссылка 2
+            </a>
+            <div class="dropdown__editablecontent">
+              <p contenteditable>Редактируемый контент</p>
+            </div>
           </div>
-          <a href="#" class="dropdown__link">Ссылка 2</a>
-          <div class="dropdown__editablecontent">
-            <p contenteditable>Редактируемый контент</p>
+          <div class="dropdown__content-footer">
+            <Button text="Закрыть" data-dropdown-close />
           </div>
-        </div>
-        <div class="dropdown__content-footer">
-          <Button text="Закрыть" data-dropdown-close />
-        </div>
-        <div class="dropdown__content-header">
-          <h3 class="dropdown__content-title">Заголовок попапа</h3>
-          <button class="dropdown__content-close" data-dropdown-close>
-            <Icon name="icon-close" />
-          </button>
+          <div class="dropdown__content-header">
+            <h3 class="dropdown__content-title">Заголовок попапа</h3>
+            <button class="dropdown__content-close" data-dropdown-close>
+              <Icon name="icon-close" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  )}
-
+    )
+  }
 </div>

@@ -46,8 +46,6 @@ function lockFocus(element: HTMLElement, startFocus: boolean = true): void {
 
     document.addEventListener('keydown', keydownHandler)
   }, 100)
-
-
 }
 
 /**
