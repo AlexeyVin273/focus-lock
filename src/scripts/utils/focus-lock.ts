@@ -1,4 +1,5 @@
-let focusableElements: HTMLElement[] = []
+// eslint-disable-next-line no-undef
+let focusableElements: NodeListOf<HTMLElement> = null
 let focusedElement: HTMLElement = null
 
 const selectors: string[] = [
@@ -30,17 +31,23 @@ function lockFocus(element: HTMLElement, startFocus: boolean = true): void {
   }
 
   focusedElement = document.activeElement as HTMLElement
-  focusableElements = Array.from(element.querySelectorAll(selectors.join(',')))
+  focusableElements = element.querySelectorAll(selectors.join(','))
 
   if (focusableElements.length === 0) {
     return
   }
 
-  if (startFocus) {
-    focusableElements[0].focus()
-  }
+  setTimeout(() => {
+    focusedElement?.blur()
 
-  document.addEventListener('keydown', keydownHandler)
+    if (startFocus) {
+      focusableElements[0].focus()
+    }
+
+    document.addEventListener('keydown', keydownHandler)
+  }, 100)
+
+
 }
 
 /**
@@ -53,7 +60,7 @@ function unlockFocus(returnFocus: boolean = true): void {
   }
 
   focusedElement = null
-  focusableElements = []
+  focusableElements = null
   document.removeEventListener('keydown', keydownHandler)
 }
 
